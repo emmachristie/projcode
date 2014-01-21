@@ -4,8 +4,18 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
-  end
+    #@users = User.all
+  #   if params[:Location]
+  #     @users = User.where(:Location => params[:Location])
+  #   else
+  #     @users = User.all
+  #   end
+
+  #   respond_to do |format|
+  #     format.html 
+  #     format.xml { render :xml => @users}
+  # end
+end
 
   # GET /users/1
   # GET /users/1.json

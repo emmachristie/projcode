@@ -7,7 +7,6 @@
       <th>Lastname</th>
       <th>Username</th>
       <th>Password</th>
-      <th>Sports</th>
       <th>Location</th>
       <th>Longitude</th>
       <th>Latitude</th>
@@ -25,7 +24,6 @@
         <td><%= user.LastName %></td>
         <td><%= user.Username %></td>
         <td><%= user.Password %></td>
-        <td><%= user.Sports %></td>
         <td><%= user.Location %></td>
         <td><%= user.Longitude %></td>
         <td><%= user.Latitude %></td>
@@ -41,3 +39,4 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+<%= link_to "People in Cambridge", local_location_path(Cambridge) %>
