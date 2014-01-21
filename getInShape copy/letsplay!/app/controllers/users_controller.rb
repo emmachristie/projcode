@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    #@users = User.all
+  @users = User.all
   #   if params[:Location]
   #     @users = User.where(:Location => params[:Location])
   #   else
@@ -21,13 +21,15 @@ end
   # GET /users/1.json
   def show
     @users = User.all
+    @person = User.all
     # @sport = User.find(params[:Sports])
-    @otherusers = User.all
+    @loclist = User.select('FirstName, LastName').where(:Location=="Cambridge")
   end
 
   # GET /users/new
   def new
     @user = User.new
+    @person = User.all
   end
 
   # GET /users/1/edit
@@ -82,6 +84,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:FirstName, :LastName, :Username, :Password, :Sports, :Location, :Longitude, :Latitude, :SelfDescription)
+      params.require(:user).permit(:FirstName, :LastName, :Username, :Password, :Location, :Longitude, :Latitude, :SelfDescription)
     end
 end
