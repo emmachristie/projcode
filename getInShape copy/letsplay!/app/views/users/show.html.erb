@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+<html>
+<body>
+<ul>
+<p>
+  <strong>Name:</strong>
+  <%= @user.FirstName %> <%= @user.LastName %>
+</p>
+
+<!-- <p>
+  <strong>Lastname:</strong>
+  
+</p> -->
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.Username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.Password %>
+</p>
+
+<p>
+  <strong>Sports:</strong>
+  <%= @user.Sports %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @user.Location %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @user.Longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @user.Latitude %>
+</p>
+
+<p>
+  <strong>Self Description:</strong>
+  <%= @user.SelfDescription %>
+</p>
+
+<p>
+  People who like the same sport as you!<br>
+  <%= client = User.find(Sports=@user.Sports) %>
+
+</p>
+
+
+</ul>
+</body>
+</html>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,122 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <script>
+    var x=document.getElementById("demo");
+    function getLocation()
+      {
+      if (navigator.geolocation)
+      {
+        navigator.geolocation.getCurrentPosition(showPosition);
+        return position.coords.la
+      }
+      else{x.innerHTML="Geolocation is not supported by this browser.";}
+      }
+    function showPosition(position)
+      {
+      // x.innerHTML="Latitude: " + position.coords.latitude + 
+      // "<br>Longitude: " + position.coords.longitude; 
+      document.getElementById('lat').innerHTML = position.coords.latitude;
+      document.getElementById('long').innerHTML = position.coords.longitude;
+
+      }
+  </script>
+
+  <div class="field">
+    <h2> What is your first name? </h2>
+    <ul class="bullets">
+      <p><%= f.text_field :FirstName, placeholder: "First Name"%><p>
+    </ul>
+  </div>
+
+
+  <div class="field">
+    <h2> What is your last name? </h2>
+    <ul class="bullets">
+      <%= f.text_field :LastName, placeholder: "Last Name" %>
+    </ul>
+  </div>
+
+  <div class="field">
+    <h2> Select a Username. </h2>
+    <ul class="bullets">
+      <%= f.text_field :Username, placeholder: "Username" %><br>
+    </ul>
+  </div>
+
+  <div class="field">
+    <h2> Choose a Password. </h2>
+    <ul class="bullets">
+      <%= f.password_field :Password, placeholder: "Password" %>
+    </ul>
+  </div>
+
+  <div class="field">
+    <h2> What sports are you interested in? </h2>
+    <ul class="bullets">
+
+
+      <%= f.select :Sports, [[' ','None'],['Basketball','Basketball'],['Soccer','Soccer'],['Tennis','Tennis']] %>
+    </ul>
+  </div>
+
+  <div class="field">
+    <h2> Where are you? </h2>
+    <ul class="bullets">
+<!--       
+      
+
+      Latitude: <span id="latitude"></span><br>
+      Longitude: <span id="longitude"></span><br>
+      <input type="button" value="Find Me!" onclick="getLocation()"></input>
+      
+
+
+    </ul>
+  </div>-->
+
+
+
+
+  <label for="user_latitude"></label>
+  <input id="user_latitude" name="user[latitude]" type="text" value="" onClick="getLocation();" id='lat'/> <span id="latitude"></span><br>
+</ul>
+</div>
+
+
+  <div class="field">
+    <h2> Latitude </h2>
+    <ul class="bullets">
+      <%= f.text_field :Latitude%>
+
+    </ul>
+  </div>
+
+    <div class="field">
+    <h2> Longitude </h2>
+    <ul class="bullets">
+      <%= f.text_field :Longitude %>
+    </ul>
+  </div>
+
+  <div class="field">
+    <h2> Describe you athletic Skillsssss </h2>
+    <ul class="bullets">
+      <%= f.text_area :SelfDescription, placeholder: "Enter Description Here" %>
+    </ul>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

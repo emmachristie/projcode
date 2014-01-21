@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="mockup.css">
+		<script type="text/javascript" src="jquery-1.10.2.js"></script>
+		<script type="text/javascript" src ="mockup.js"></script>
+	</head>
+		<script>
+			var x=document.getElementById("demo");
+			function getLocation()
+  			{
+  			if (navigator.geolocation)
+    		{
+    			navigator.geolocation.getCurrentPosition(showPosition);
+    		}
+  			else{x.innerHTML="Geolocation is not supported by this browser.";}
+  			}
+			function showPosition(position)
+  			{
+  			x.innerHTML="Latitude: " + position.coords.latitude + 
+  			"<br>Longitude: " + position.coords.longitude; 
+  			}
+		</script>
+			<nav class="top">
+			<ul>
+				<li><a href="jsexcercises.html" id="logo">Let's Play!</a></li>
+				<li><a href="jsexcercises.html" class="white">About</a></li>
+				<li><a href="jsexcercises.html" class="white">Messages</a></li>
+				<li><a href="jsexcercises.html" class="white">Help</a></li>
+				<li><a href="jsexcercises.html" class="white">Feedback</a></li>
+				<li><img src="IMG_0860.jpg"></li>
+				<li id="melist"><a href="jsexcercises.html" id="me" class="white">Me</a></li>
+
+			</ul>
+		</nav>
+	<body>
+
+		<div id="wrapper">
+			<h1> Getting Started!</h1>
+
+			<div id="q0" class="question".>
+				<h2> What is your name? </h2>
+				<ul class="bullets">
+					<p><input type="text" placeholder = "First Name"></input>
+					<input type="text" placeholder = "Last Name"></input></p>
+				</ul>
+			</div>
+
+			<div id="q1" class="question".>
+				<h2> Choose a Username. </h2>
+				<ul class="bullets">
+					<p><input type="text" placeholder = "Username"></input></p>
+				</ul>
+			</div>
+
+			<div id="q1" class="question".>
+				<h2> Choose a Password. </h2>
+				<p id="aside">Must be at least 8 characters.</p>
+				<ul class="bullets">
+					<p><input type="password" placeholder = "Password"></input></p>
+				</ul>
+			</div>
+
+			<div id="q1" class="question">
+				<h2> Which sports are you looking to play? </h2>
+				<ul class="bullets">
+					<p><input name="sport" type="checkbox">   Basketball</input></p>
+					<p><input name="sport" type="checkbox">   Soccer</input></p>
+					<p><input name="sport" type="checkbox">   Tennis</input></p>
+				</ul>
+			</div>
+
+			<div id="q2" class="question">
+				<h2> Describe your athletic experiences. </h2>
+				<ul class="bullets">
+					<form method="post" action="">
+					<textarea name="comments" cols="25" rows="5">Enter your comments here...
+					</textarea><br>
+				</ul>
+			</div>
+
+<!-- 			<div id="q3" class="question">
+				<h2>How big of a game do you want?</h2>
+				<p>
+				<form action="">
+				<select name="team">
+				<option value="empty"></option>
+				<option value="one">1 on 1</option>
+				<option value="two">2 on 2</option>
+				<option value="three">3 on 3</option>
+				<option value="five">5 on 5</option>
+				</select>
+				</form>
+			</p>
+			<ul class="bullets">
+				<p><input name="group" type="radio">   1 on 1 </input></p>
+				<p><input name="group" type="radio">   2 on 2 </input></p>
+				<p><input name="group" type="radio">   3 on 3 </input></p>
+				<p><input name="group" type="radio">   5 on 5 </input></p>
+				
+			</div> -->
+
+			<div id="q4" class="question">
+				<h2>Where are you?</h2>
+				<ul class="bullets">
+					<p><input name="loc" type="radio">   Use current location. (Recommended)</input><input type="submit" value="Find Me!" onclick="getLocation()"></input></p>
+					<p><input name="loc" type="radio">   Enter zipcode   </input><input type="text" id="zipcode" placeholder="Enter zipcode"></p>
+				</ul>
+			</div>
+
+			<div id="q5" class="question">
+				<h2>How far are you willing to travel?</h2>
+					<p id="aside">Selecting a wider radius gives you more options!</p>
+					<ul class="bullets">
+						<p><input name="travel" type="radio">   less than 5 miles</input></p>
+						<p><input name="travel" type="radio">   5-10 miles</input></p>
+						<p><input name="travel" type="radio">   10-15 miles</input></p>
+						<p><input name="travel" type="radio">   more than 15 miles</input></p>
+					</ul>
+			</div>
+			<div id="q6" class="question">
+				<h2>When are you looking to play?</h2>
+				<p id ="aside">Selecting a wider time frame gives you more choices!</p>
+				<ul class="bullets">
+					<p><input name="day" type="checkbox">   Sunday</input></p>
+					<p><input name="day" type="checkbox">   Monday</input></p>
+					<p><input name="day" type="checkbox">   Tuesday</input></p>
+					<p><input name="day" type="checkbox">   Wednesday</input></p>
+					<p><input name="day" type="checkbox">   Wednesday</input></p>
+					<p><input name="day" type="checkbox">   Thursday</input></p>
+					<p><input name="day" type="checkbox">   Friday</input></p>
+					<p><input name="day" type="checkbox">   Saturday</input></p>
+				</ul>
+				 Between   <input type ="time"></input>   and   <input type ="time"></input>
+			</ul>
+			</div>
+			<input type="submit" id="sendChat" value="Find a match!"></input>
+		</div>
+	</body>
+</html>
