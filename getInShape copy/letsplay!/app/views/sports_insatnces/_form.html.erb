@@ -1,0 +1,17 @@
+<%= form_for(@sports_insatnce) do |f| %>
+  <% if @sports_insatnce.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sports_insatnce.errors.count, "error") %> prohibited this sports_insatnce from being saved:</h2>
+
+      <ul>
+      <% @sports_insatnce.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
