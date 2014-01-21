@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140121214822) do
+ActiveRecord::Schema.define(version: 20140121222342) do
 
-  create_table "sports_insatnces", force: true do |t|
+  create_table "sport_instances", force: true do |t|
     t.string   "sport"
     t.integer  "user_id"
     t.datetime "created_at"
