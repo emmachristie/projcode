@@ -1,7 +1,7 @@
 Letsplay::Application.routes.draw do
-  resources :users
-  resources :sport_instances
-  #match '/local_location/:Location' => 'users#index', :as => 'local_location'
+  resources :user_sports
+
+  resources :users  #match '/local_location/:Location' => 'users#index', :as => 'local_location'
   #match '/new_tweet' => 'users#new'
   
   get "sport_instances/index"

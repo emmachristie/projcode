@@ -1,0 +1,31 @@
+<h1>Listing user_sports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sport</th>
+      <th>User</th>
+      <th>User name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_sports.each do |user_sport| %>
+      <tr>
+        <td><%= user_sport.sport %></td>
+        <td><%= user_sport.user_id %></td>
+        <td><%= user_sport.user_name %></td>
+        <td><%= link_to 'Show', user_sport %></td>
+        <td><%= link_to 'Edit', edit_user_sport_path(user_sport) %></td>
+        <td><%= link_to 'Destroy', user_sport, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User sport', new_user_sport_path %>
