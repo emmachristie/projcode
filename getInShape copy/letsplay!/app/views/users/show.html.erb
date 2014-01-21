@@ -47,10 +47,15 @@
 
 <p>
   People who like the same sport as you!<br>
-  <% @otherusers.each do |ouser| %>
+  <% @loclist.each do |person| %>
+ 
+
+    <%= @person.FirstName %>
+
   
-    <td><%= @otheruser.Location %></td>
-    <% end %>
+    
+   
+ <%end%>   
 
 </p>
 
