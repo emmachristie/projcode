@@ -4,20 +4,16 @@ Letsplay::Application.routes.draw do
   resources :users  #match '/local_location/:Location' => 'users#index', :as => 'local_location'
   #match '/new_tweet' => 'users#new'
   
-<<<<<<< HEAD
+
   #get "sport_instances/index"
-=======
   #get "welcome/index"
->>>>>>> 021faa65bfe69faac0e983fab0131a425dd23231
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-<<<<<<< HEAD
+
    root 'welcome#index'
-=======
-   root '#index'
->>>>>>> 021faa65bfe69faac0e983fab0131a425dd23231
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
