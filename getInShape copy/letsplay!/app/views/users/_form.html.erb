@@ -61,43 +61,40 @@
     </ul>
   </div>
 
-  <div class="field">
+<!--   <div class="field">
     <h2> What sports are you interested in? </h2>
-    <ul class="bullets">
+    <ul class="bullets"> -->
 
 
-      <%= f.select :Sports, [[' ','None'],['Basketball','Basketball'],['Soccer','Soccer'],['Tennis','Tennis']] %>
-    </ul>
-  </div>
 
-  <div class="field">
-    <h2> Where are you? </h2>
-    <ul class="bullets">
-<!--       
-      
-
-      Latitude: <span id="latitude"></span><br>
-      Longitude: <span id="longitude"></span><br>
-      <input type="button" value="Find Me!" onclick="getLocation()"></input>
       
 
 
-    </ul>
-  </div>-->
+
 
 
 
 
   <label for="user_latitude"></label>
-  <input id="user_latitude" name="user[latitude]" type="text" value="" onClick="getLocation();" id='lat'/> <span id="latitude"></span><br>
+  <input id="user_latitude" name="user[latitude]" type="button" onClick="getLocation()" value="Find Me!"/> <span id="lat"></span><br><span id="long"><span>
 </ul>
 </div>
+
+
+
+  <div class="field">
+    <h2> Location </h2>
+    <ul class="bullets">
+      <%=f.text_field :Location %>
+
+    </ul>
+  </div>
 
 
   <div class="field">
     <h2> Latitude </h2>
     <ul class="bullets">
-      <%= f.text_field :Latitude%>
+      <%=f.text_field :Latitude %>
 
     </ul>
   </div>

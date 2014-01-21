@@ -22,10 +22,7 @@
   <%= @user.Password %>
 </p>
 
-<p>
-  <strong>Sports:</strong>
-  <%= @user.Sports %>
-</p>
+
 
 <p>
   <strong>Location:</strong>
@@ -47,9 +44,13 @@
   <%= @user.SelfDescription %>
 </p>
 
+
 <p>
   People who like the same sport as you!<br>
-  <%= client = User.find(Sports=@user.Sports) %>
+  <% @users.each do |user| %>
+  
+    <td><%= @user.Location %></td>
+    <% end %>
 
 </p>
 
