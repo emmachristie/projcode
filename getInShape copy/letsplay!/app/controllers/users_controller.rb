@@ -23,7 +23,9 @@ end
     @users = User.all
     @person = User.all
     # @sport = User.find(params[:Sports])
-    @loclist = User.select('FirstName, LastName').where(:Location=="Cambridge")
+    
+
+
   end
 
   # GET /users/new

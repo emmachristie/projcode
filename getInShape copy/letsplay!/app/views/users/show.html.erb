@@ -46,11 +46,18 @@
 
 
 <p>
-  People who like the same sport as you!<br>
-  <% @loclist.each do |person| %>
- 
+  People in your area!<br>
 
-    <%= @person.FirstName %>
+
+  <% @loclist = User.select('FirstName, LastName','Location','id').where(:Location=>[@user.Location]).where.not(:id=>[@user.id]) %>
+  <% @loclist.each do |i| %>
+ 
+  <table>
+    <td><%= i.FirstName %> </td><p>
+    <td><%= i.LastName %> </td><p>
+    <td><%= i.Location %></td>
+  </table>
+
 
   
     
