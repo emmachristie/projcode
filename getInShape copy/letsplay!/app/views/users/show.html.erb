@@ -46,11 +46,7 @@
   <%= @user.SelfDescription %>
 </p>
 
-<<<<<<< HEAD
-<strong>People in your area who play your sports</strong><br>
-=======
 
->>>>>>> 817af677a1be71a1d04094b2b5b0cb67a9c26867
 
 <% @user_pref= UserSport.where(:user_id=> [@user.id]) %>
 <% @user_pref.each do |game| %>
