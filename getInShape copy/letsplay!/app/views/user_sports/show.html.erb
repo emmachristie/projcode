@@ -21,16 +21,13 @@
 <% @ballerlist= UserSport.where(:sport => @user_sport.sport).where.not(:user_id =>[@user_sport.user_id]) %>
 <% @ballerlist.each do |i| %>
 
+<% end %>
+
 <table>
 	<td><%=i.user_name %></td>
 </table>
 
 <%end%>
-
-
-
-
-
 
 </p>
 

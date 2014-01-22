@@ -61,10 +61,13 @@
     </ul>
   </div>
 
-
+<div class="field">
+  Latitude:<span id="lat"></span><br>
+  Longitude:<span id="long"><span><br>
   <label for="user_latitude"></label>
-  <input id="user_latitude" name="user[latitude]" type="button" onClick="getLocation()" value="Find Me!"/> <span id="lat"></span><br><span id="long"><span>
-</ul>
+  <input id="user_latitude" name="user[latitude]" type="button" onClick="getLocation()" value="Find Me!"/> 
+
+</div>
 
 
 
@@ -73,7 +76,6 @@
     <h2> Location </h2>
     <ul class="bullets">
       <%=f.text_field :Location %>
-
     </ul>
   </div>
 
@@ -82,7 +84,6 @@
     <h2> Latitude </h2>
     <ul class="bullets">
       <%=f.text_field :Latitude %>
-
     </ul>
   </div>
 
@@ -102,5 +103,6 @@
 
   <div class="actions">
     <%= f.submit %>
-  </div>
+  
 <% end %>
+</div>

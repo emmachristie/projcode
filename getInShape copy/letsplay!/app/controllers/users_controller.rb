@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
   @users = User.all
+
   #   if params[:Location]
   #     @users = User.where(:Location => params[:Location])
   #   else
@@ -21,7 +22,7 @@ end
   # GET /users/1.json
   def show
     @users = User.all
-    @person = User.all
+    @user_sport = UserSport.all
     # @sport = User.find(params[:Sports])
     
 

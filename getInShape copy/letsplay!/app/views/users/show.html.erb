@@ -2,6 +2,8 @@
 <html>
 <body>
 <ul>
+
+
 <p>
   <strong>Name:</strong>
   <%= @user.FirstName %> <%= @user.LastName %>
@@ -45,31 +47,40 @@
 </p>
 
 
+
+
+
 <p>
   People in your area!
-
-
   <% @loclist = User.select('FirstName, LastName','Location','id').where(:Location=>[@user.Location]).where.not(:id=>[@user.id]) %>
   <% @loclist.each do |i| %>
- 
   <table>
     <td><%= i.FirstName %> </td><p>
     <td><%= i.LastName %> </td><p>
     <td><%= i.Location %></td>
   </table>
+<% end %>
+</p> 
 
 
-  
-    
-   
- <%end%>   
+<p>
 
+  <% @user_sport.each do |i|%>
+  <table>
+    <td><%= i.user_name%></td>
+  </table>
+  <%end%>
 </p>
+
+
+
+
+
 
 
 </ul>
 </body>
 </html>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Edit', edit_user_path(@user) %> 
 <%= link_to 'Back', users_path %>
