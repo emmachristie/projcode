@@ -17,8 +17,22 @@
 
 
 <p>
-	<strong> People in your area: </strong>
-	<% puts show(@user_sport.sport)%>
+<strong>Other <%= @user_sport.sport %> Players: </strong>
+<% @ballerlist= UserSport.where(:sport => @user_sport.sport).where.not(:user_id =>[@user_sport.user_id]) %>
+<% @ballerlist.each do |i| %>
 
-<%= link_to 'Edit', edit_user_sport_path(@user_sport) %> |
+<table>
+	<td><%=i.user_name %></td>
+</table>
+
+<%end%>
+
+
+
+
+
+
+</p>
+
+<%= link_to 'Edit', edit_user_sport_path(@user_sport) %> 
 <%= link_to 'Back', user_sports_path %>

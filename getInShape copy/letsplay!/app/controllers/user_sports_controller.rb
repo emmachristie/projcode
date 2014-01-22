@@ -9,9 +9,8 @@ class UserSportsController < ApplicationController
 
   # GET /user_sports/1
   # GET /user_sports/1.json
-  def show(mysport)
-    yoursport= UserSport.where(:sport => mysport)
-    return yoursport
+  def show
+    # return yoursport
   end
 
   # GET /user_sports/new
