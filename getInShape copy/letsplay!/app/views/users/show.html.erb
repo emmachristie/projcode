@@ -46,11 +46,11 @@
   <%= @user.SelfDescription %>
 </p>
 
-<strong>People in your area who play your sport</strong><br>
+
 
 <% @user_pref= UserSport.where(:user_id=> [@user.id]) %>
 <% @user_pref.each do |game| %>
-    Sport:<%= game.sport %><br>
+    <% @mySport = game.sport %><br>
     <% @sport_users= UserSport.where(:sport=> [game.sport]).where.not(:user_id=>[@user.id])%>
     <% @sport_users.each do |baller| %>
         <% @baller_id = baller.user_id%>
@@ -58,10 +58,11 @@
         <% @loclist = User.where(:Location=>[@user.Location],:id =>[@baller_id]) %>  
           <% @loclist.each do |i| %>
             <p>
+              <thead><strong>People in <%= i.Location %> who play <%=@mySport%>!</strong><br></thead>
               <table>
                 <td><%= i.FirstName %></td>
                 <td><%= i.LastName %></td>
-                <td><%= i.Location %></td>  
+                
             </table>
             </p> 
           <%end%>
