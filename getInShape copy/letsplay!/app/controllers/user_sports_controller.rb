@@ -9,7 +9,9 @@ class UserSportsController < ApplicationController
 
   # GET /user_sports/1
   # GET /user_sports/1.json
-  def show
+  def show(mysport)
+    yoursport= UserSport.where(:sport => mysport)
+    return yoursport
   end
 
   # GET /user_sports/new
@@ -67,6 +69,7 @@ class UserSportsController < ApplicationController
       @user_sport = UserSport.find(params[:id])
     end
 
+    
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_sport_params
       params.require(:user_sport).permit(:sport, :user_id, :user_name)

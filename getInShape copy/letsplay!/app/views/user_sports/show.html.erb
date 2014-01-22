@@ -15,5 +15,10 @@
   <%= @user_sport.user_name %>
 </p>
 
+
+<p>
+	<strong> People in your area: </strong>
+	<% puts show(@user_sport.sport)%>
+
 <%= link_to 'Edit', edit_user_sport_path(@user_sport) %> |
 <%= link_to 'Back', user_sports_path %>
