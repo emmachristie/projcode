@@ -49,29 +49,23 @@
 
 
 
-
-<p>
-  People in your area!
-  <% @loclist = User.select('FirstName, LastName','Location','id').where(:Location=>[@user.Location]).where.not(:id=>[@user.id]) %>
+<% @user_pref= UserSport.where(:user_id=> [@user.id]) %>
+<% @user_pref.each do |sport| %>
+<% @sport_users= UserSport.where(:sport=> [sport])%>
+<% @sports_users.each do |baller| %>
+<% @loclist = User.select('FirstName, LastName','Location','id').where(:Location=>[baller.Location]).where.not(:id=>[@user.id]) %>
   <% @loclist.each do |i| %>
+  <p>
   <table>
     <td><%= i.FirstName %> </td><p>
     <td><%= i.LastName %> </td><p>
     <td><%= i.Location %></td>
   </table>
 <% end %>
+<% end %>
+<% end %>
+
 </p> 
-
-
-<p>
-
-  <% @user_sport.each do |i|%>
-  <table>
-    <td><%= i.user_name%></td>
-  </table>
-  <%end%>
-</p>
-
 
 
 
