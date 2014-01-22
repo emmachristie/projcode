@@ -46,7 +46,7 @@
 
 
 <p>
-  People in your area!<br>
+  People in your area!
 
 
   <% @loclist = User.select('FirstName, LastName','Location','id').where(:Location=>[@user.Location]).where.not(:id=>[@user.id]) %>
