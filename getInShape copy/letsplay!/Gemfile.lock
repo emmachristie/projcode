@@ -59,7 +59,7 @@ GEM
    mail (2.5.4)
      mime-types (~> 1.16)
      treetop (~> 1.4.8)
-   mailboxer (0.11.0)
+   
      carrierwave (>= 0.5.8)
      foreigner (>= 0.9.1)
      rails (> 3.0.0)
