@@ -13,3 +13,4 @@
 7) Google Chrome
 
 8) When trying to host the website, I (Emma) kind of messed up and lost a little functionality in the process so I need to fix  and the login page. I know it is a hassle, but that code does exist in our gituhub. Sorry about that.
+A few things need to be fixed in addition. When showing people in your area, self shouldnt show up. The find me button should use the lat and long it produces to get a location for the user without them having to type that in themselves. Also a lot of styling.
