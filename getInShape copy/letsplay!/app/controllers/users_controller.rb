@@ -22,8 +22,9 @@ end
   # GET /users/1.json
   def show
     @users = User.all
-    @user_sport = UserSport.all
+    @user_sport = UserSport.all 
     # @sport = User.find(params[:Sports])
+    
     
 
 
@@ -33,6 +34,7 @@ end
   def new
     @user = User.new
     @person = User.all
+
   end
 
   # GET /users/1/edit
