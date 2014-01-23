@@ -41,12 +41,12 @@ GEM
     coffee-script-source (1.6.3)
     erubis (2.7.0)
     execjs (2.0.2)
-<<<<<<< HEAD
+
     geocoder (1.1.9)
-=======
+
     foreigner (1.6.1)
       activerecord (>= 3.0.0)
->>>>>>> d74a3e02a97e8e733d1f751c09d87610bf2909e3
+
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
