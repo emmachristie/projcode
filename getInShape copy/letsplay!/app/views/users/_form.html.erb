@@ -12,11 +12,6 @@
   <% end %>
 
 
-
-
-
-
-
 <script>
 var x=document.getElementById("demo");
 function getLocation()
@@ -65,11 +60,8 @@ function showError(error)
     <h2> What is your first name? </h2>
     <ul class="bullets">
       <p><%= f.text_field :FirstName, placeholder: "First Name"%><p>
-
-
     </ul>
   </div>
-
 
   <div class="field">
     <h2> What is your last name? </h2>
@@ -99,14 +91,10 @@ function showError(error)
   long:<span id="long"></span><br>
   <label for="user_latitude"></label>
  <!--  <input id="user_latitude" name="user[latitude]" type="button" onClick="getLocation()" value="Find Me!"/>  -->
-<input type="button" onclick="getLocation()" value="Find Me!"></input><br>
-
+<input type="button" onclick="getLocation()" value="Find Me!"></input>
 <body>
-  <div id="mapholder" align="center">
-
-</div>
+  <div id="mapholder"></div>
 </body>
-
 </div>
 
 
@@ -124,15 +112,12 @@ function showError(error)
     </ul>
   </div> -->
 
-
   <div class="field">
     <h2> Location </h2>
     <ul class="bullets">
       <%=f.text_field :Location %>
     </ul>
   </div>
-
-
 
   <div class="field">
     <h2> Describe you athletic Skillsssss </h2>
