@@ -30,6 +30,11 @@ end
 
   end
 
+  def chat
+  end
+
+
+
   # GET /users/new
   def new
     @user = User.new
