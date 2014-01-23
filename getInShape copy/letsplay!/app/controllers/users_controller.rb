@@ -25,14 +25,12 @@ end
     @user_sport = UserSport.all 
     # @sport = User.find(params[:Sports])
     
-    
-
-
   end
 
   def chat
+    @user = User.new
+    @messager= @user.Username
   end
-
 
 
   # GET /users/new
