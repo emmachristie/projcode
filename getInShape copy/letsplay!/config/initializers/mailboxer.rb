@@ -15,6 +15,6 @@ Mailboxer.setup do |config|
   config.search_enabled = false
   config.search_engine = :solr
 
-  config.notification_mailer= CustomNotificationMailer
-  config.message_mailer= CustomMessageMailer
+  # config.notification_mailer= CustomNotificationMailer
+  # config.message_mailer= CustomMessageMailer
 end
